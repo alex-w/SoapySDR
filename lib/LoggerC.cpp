@@ -75,7 +75,7 @@ extern "C" {
 
 void SoapySDR_log(const SoapySDRLogLevel logLevel, const char *message)
 {
-    if (logLevel > registeredLogLevel and logLevel != SOAPY_SDR_SSI) return;
+    if (logLevel > registeredLogLevel && logLevel != SOAPY_SDR_SSI) return;
     return registeredLogHandler(logLevel, message);
 }
 

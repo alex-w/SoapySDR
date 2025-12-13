@@ -10,4 +10,9 @@
 
 #pragma once
 #include <SoapySDR/Config.h>
-#include <ciso646>
+
+#if (defined(_MSVC_LANG) || __cplusplus < 201703L)
+  // For old or nonconforming compilers,
+  // using the alternative operator representations may require including this header.
+  #include <ciso646>
+#endif
